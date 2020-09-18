@@ -1,10 +1,47 @@
-{
-        "background-color:Gainsboro;"
-        color:#121212;
-        color:white;
+.table {
+    background: black;
 }
 
-     p {
+style {
+        "background-color:#121212;"
+        color:#121212;
+        color:white;
+        }
+
+.indexbody {
+    background-color: #2E2E2E;
+}
+
+.homename {
     color: white;
-    font-size: 20px;
-            }
+}
+
+.resumebody {
+    background-color: #2E2E2E;
+}
+
+.red {
+    color: red;
+}
+
+.white {
+    color: white;
+}
+
+.contactbody {
+    background-color: #2E2E2E;
+}
+
+.aboutbody {
+    background-color: #2E2E2E;
+}
+
+#underline {
+    text-decoration: underline;
+}
+
+#aboutmetext {
+    text-align: left;
+    color: white;
+    font-size:14px;
+}
