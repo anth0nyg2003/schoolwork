@@ -1,12 +1,5 @@
-<!DOCTYPE html>
-    <html>
-    <head>
-            <title>Page Title</title>
-
-
-
-            .navbar {
-                background-color: green;
+         .navbar {
+                background-color: black;
                 overflow: hidden;
                 padding: 0px;
 
@@ -36,7 +29,7 @@
             }
 
 
-            .dropwdown-content {
+            .dropdown-content {
                 padding: 0px;
                 background-color: black;
                 display: none;
@@ -46,32 +39,3 @@
             .dropdown:hover .dropdown-content {
                 display: block;
             }
-        </style>
-    </head>
-
-    <body>
-
-
-        <ul class="navbar">
-            <li><a href="index.html">Home</li>
-            <li><a href="Resume.html">Resume</li>
-            <li><a href="Contact.html">Contact Me</li>
-            <li><a href="Contact.html">About Me</li>
-            <li class="dropdown">    
-                <a href="#"> Projects</a>
-                <ul class="dropdown-content">
-                    <li><a href="#">Project 1</li>
-                    <li><a href="#">Project 2</li>
-                    <li><a href="#">Project 3</li>
-                    <li><a href="#">Project 4</li>
-                    <li><a href="#">Project 5</li>
-                </ul> 
-            </li>
-        </ul>
-
-        <h1>My First Heading</h1>
-        <p>My first paragraph.</p>
-
-    </body>
-
-</html>
