@@ -41,7 +41,15 @@ style {
 }
 
 #aboutmetext {
-    text-align: left;
-    color: white;
-    font-size:14px;
+body {
+    background-color:#202020
+}
+p {
+    color:white;
+    font-size: 20px;
+}
+h1 {
+    color:white
+}
+   
 }
