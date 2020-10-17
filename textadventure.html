@@ -7,54 +7,62 @@
         <body style=background-color:Gainsboro>
     
         <style> 
-        #container{
-            position: absolute;
-            left: 0px;
-            right: 0px;
-            top: 90px;
-            bottom: 0px;
-            background-color: red;
-        }
+            #container{
+                position: absolute;
+                left: 0px;
+                right: 0px;
+                top: 90px;
+                bottom: 0px;
+            }
 
-        #left_pane{
-            background-color:green;
-            height:100%;
-            width:56%;
-            float: left;
-        }
+            #left_pane{
+                height:100%;
+                width:56%;
+                float: left;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
 
-        #right_pane{
-            background-color:blue;
-            height: 100%;
-            width: 44;
-            float: left;
-        }
+            #right_pane{
+                height: 100%;
+                width: 44;
+                float: left;
+            }
 
-        #story_text{
-            background-color:yellow;
-            height: 80%
-            
-        }
+            #story_text{
+                height: 80%
+                
+            }
 
-        #button_choices{
-            background-color: pink;
-            height: 20%;
+            #button_choices{
+                height: 20%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
 
-        }
+            #story_img{
+                max-height: 97%;
+                max-width: 97%;
+                width: auto;
+                height: auto;
+            }
 
-        #story_img{
-            max-height: 97%;
-            max-width: 97%;
-            width: auto;
-            height: auto;
-        }
+            #b1, #b2, #b3, #b4 {
+                text-decoration: none;
+                color: white;
+                background-color: black;
+                padding: 10px;
+                border-radius: 8px;
+                font-size: 16px;
+                margin: 10px;
+                
+            }
 
-        .buttons{
-            text-decoration: none;
-            color: white;
-            background-color: black;
-            
-        }
+            p {
+                font-size: 19px;
+            }
         </style>
     </head>
 
@@ -77,44 +85,72 @@
         </ul>
         <div id="container">
             <div id="left_pane"> 
-                <img src="images/7ds.jpg"/>
+                <img id="story_img" src="images/7ds.jpg"/>
             </div>
 
             <div id="right_pane">
                 <div id="story_text">
                     <p id="p1">Welcome to the Ice Cream Shop </p>
-                    <p> It is the year 2020 </p>
-                    <p> Do You like Ice Cream </p>
+                    <p id="p2"> It is the year 2020 </p>
+                    <p id="p3"> Do You like Ice Cream </p>
                 </div>
 
                 <div id="button_choices">
-
-                <a href="">Yes </a>
-                <a id="b1" classes="buttons" href=""onquick="bclick(1)">Yes</a>
-                <a id="b2" classes="buttons" href=""onquick="bclick(2)">No</a>
-                <a id="b3" classes="buttons" href=""onquick="bclick(3)">Yes</a>
-                <a id="b4" classes="buttons" href=""onquick="bclick(4)">No</a>
-                </div>
+                    <a id="b1" classes="buttons" href="" onclick="bclick(1)">Yes</a>
+                    <a id="b2" classes="buttons" href="" onclick="bclick(2)">No</a>
+                    <a id="b3" classes="buttons" href="" onclick="bclick(3)">Yes</a>
+                    <a id="b4" classes="buttons" href="" onclick="bclick(4)">No</a>
+                </div> 
             </div>
         </div>
 
         <script>
             var b1 = document.getElementById("b1");
             var b2 = document.getElementById("b2");
-            var b3 = document.getElementById("b3");
-            var b4 = document.getElementById("b4");
-            var image = document.getElementById("story_img");
+            // var b3 = document.getElementById("b3");
+            // var b4 = document.getElementById("b4");
+            var img = document.getElementById("story_img");
             var p1 = document.getElementById("p1");
             var p2 = document.getElementById("p2");
             var p3 = document.getElementById("p3");
             var state ="intro";
             intro();
-
             function intro(){
-                img.src="images/7ds.jpg";
-                b1.innerHTML = "Stay in school";
+                img.src="images/intro.jpg";
+                b1.innerHTML = "Let's get started";
+                p1.innerHTML = "Good Morning Light Bringer, You finally woke up. We need your help.";
+                p2.innerHTML= "We're in a war right now and you got a task to do. The fate of humanity is on your hands.";
+                p3.style.display ="none";
+                b2.style.display ="none";
+                b3.style.display = "none";
+                b4.style.display = "none";
+            }
+
+            function letsGetStarted(){
+                img.src="images/letsgetstarted.jpeg";
+                p1.innerHTML="Your task is to join up with one of three groups. For these will be your Allies in this war."
+                p2.innerHTML="Be wise with your decision as it will cost the fate of humanity."
+                p3.innerHTML="You have the choice of joining the Seven Deadly Sins, Ten Commandments or the Four Archangels."
+                p4.innerHTML="What will it be LightBringer?"
+                b1.innerHTML="The Seven Deadly Sins"
+                b2.innerHTML="Ten Commandments"
+                b3.innerHTML="Four Archangels"
+
 
             }
+
+
+            /////State Machine
+            function bclick(button){
+                if (state == "intro"){
+                    if(button == 1){
+                        letsGetStarted();
+                        state = "letsGetStarted";
+                    }
+                }
+            }
+
+
 
         </script>
     </body>
