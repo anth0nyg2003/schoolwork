@@ -172,7 +172,7 @@
                 b3.style.display="none"
             }
 
-            function wageWarTwo(){
+                function wageWarTwo(){
                 img.src="images/wageWar1.png"
                 p1.innerHTML="Ah you have succeeded and join the dark side, You actually destroyed humanity causing havoc on Earth devouring all human souls so only demons are left in this realm.";
                 p2.innerHTML="If the choice you made didn't satisfy your thirst of winning then would you like to retry and start again?";
@@ -180,7 +180,7 @@
                 b3.style.display="none"
             }
 
-            function wageWarThree(){
+                function wageWarThree(){
                 img.src="images/wageWar1.png"
                 p1.innerHTML="Picking the four archangels was a good choice because even though it's a small group they are the strongest. Your communication with them is very good and is able to wipe out the pest that come from the demon realm that's haunting humanity.";
                 p2.innerHTML="If the choice you made didn't satisfy your thirst of winning then would you like to retry and start again?";
@@ -189,51 +189,52 @@
                 b3.style.display="none"
             }
 
-            /////State Machine
+            //////State Machine
             function bclick(button){
-                if (state == "intro"){
+            if (state == "intro"){
                     if(button == 1){
                         letsGetStarted();
-                        state = "letsGetStarted";
+                        state="letsGetStarted";
                     }
-                }
-                else if(state =="letsGetStarted"){
-                if (button == 1){
-                    sevenDeadlySins();
-                    state="sevenDeadlySins";
-                }
-                else if(button == 2){
-                    tenCommandments();
-                    state="tenCommandments";
-                }
-                else if (button == 3){
-                    fourArchangels();
-                    state="fourArchangels";
-                }
-                else if (state == "sevenDeadlySins"){
-                    if (button == 1){
-                    wageWarOne();
-                    state="wageWarOne";
-                }
-                else if (state =="tenCommandments"){
-                    if (button == 2){
-                        wageWarTwo();
-                        state="wageWarTwo";
-                    }                
-                }
-                else if (state == "fourArchangels")
-                    if (button == 3){
-                        wageWarThree();
-                        state="wageWarThree"
+                    else if(button == 2){
+                        tenCommandments();
+                        state ="tenCommandments";
                     }
-                }
-                else if (state = "wageWarOne")
+                    else if(button == 3){
+                        fourArchangels();
+                        state="fourArchangels";
+                    }
+                }    
+                else if(state == "letsGetStarted"){
                     if (button == 1){
                         wageWarOne();
-                        state="wageWAr"
+                        state="wageWarOne";
+                    }
+                    else if(button == 2){
+                        Pirate();
+                        state="Pirate";
+                    }
+                }  
+                else if(state == "Marine"){
+                    if (button == 1){
+                        Starttraining();
+                        state="Starttraining";
+                    }
+                    else if(button ==2){
+                        intro();
+                        state="intro";
                     }
                 }
-            }
+                else if(state == "Pirate"){
+                    if (button == 1){
+                        Startadventure();
+                        state="Startadventure";
+                    }
+                    if (button == 2){
+                        intro();
+                        state="intro";
+                    }
+                }   
 
         </script>
     </body>
